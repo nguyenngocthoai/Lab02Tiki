@@ -6,13 +6,25 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <TextView
+        android:id="@+id/textView13"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:text="@string/xem_t_i_y"
+        android:textColor="#134FEC"
+        app:layout_constraintEnd_toEndOf="@+id/textView4"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/textView4"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
     <Button
         android:id="@+id/btnApDung"
-        android:layout_width="96dp"
+        android:layout_width="wrap_content"
         android:layout_height="32dp"
         android:layout_marginEnd="28dp"
         android:layout_marginBottom="12dp"
-        android:background="#0A5EB7"
+        android:background="@drawable/btn_ap_dung"
         android:text="Áp dụng"
         app:layout_constraintBottom_toTopOf="@+id/guideline"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,14 +33,14 @@
 
     <EditText
         android:id="@+id/edtMaGiamGia"
-        android:layout_width="122dp"
+        android:layout_width="wrap_content"
         android:layout_height="37dp"
         android:layout_marginStart="16dp"
         android:autofillHints=""
-        android:background="#FFEB3B"
+        android:background="@drawable/edt_ma_giam_gia"
         android:ems="10"
         android:gravity="center"
-        android:hint="Mã giảm giá"
+        android:hint="@string/m_gi_m_gi"
         android:inputType="textPersonName"
         android:textColor="#000000"
         android:textColorHint="#000000"
@@ -220,13 +232,14 @@
 
     <TextView
         android:id="@+id/textView12"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="22dp"
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:fontFamily="@font/roboto_bold"
         android:text="@string/t_m_t_nh"
         android:textColor="#000000"
+        android:textStyle="bold"
         app:layout_constraintBaseline_toBaselineOf="@+id/txtPrice"
         app:layout_constraintEnd_toStartOf="@+id/txtPrice"
         app:layout_constraintHorizontal_bias="0.0"
@@ -247,9 +260,10 @@
         android:id="@+id/textView14"
         android:layout_width="wrap_content"
         android:layout_height="22dp"
-        android:layout_marginStart="28dp"
+        android:layout_marginStart="16dp"
         android:fontFamily="@font/roboto_bold"
         android:text="@string/th_nh_ti_n"
+        android:textStyle="bold"
         app:layout_constraintBaseline_toBaselineOf="@+id/txtSumPrice"
         app:layout_constraintStart_toStartOf="parent" />
 
@@ -257,7 +271,7 @@
         android:id="@+id/txtSumPrice"
         android:layout_width="wrap_content"
         android:layout_height="20dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="2dp"
         android:layout_marginEnd="28dp"
         android:text="@string/_141_800"
         android:textColor="#FF0D0D"
@@ -271,7 +285,7 @@
         android:layout_marginStart="16dp"
         android:layout_marginEnd="16dp"
         android:layout_marginBottom="16dp"
-        android:background="#E53935"
+        android:background="@drawable/btn_dat_hang"
         android:text="@string/ti_n_h_nh_t_h_ng"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

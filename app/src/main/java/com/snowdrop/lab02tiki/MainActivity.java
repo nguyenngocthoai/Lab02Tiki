@@ -12,11 +12,12 @@ import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
     ImageButton btnCong, btnTru;
-    TextView txtSoLuong, txtPrice, txtSUmPrice, txtPriceOrginal;
+    TextView txtSoLuong, txtPrice, txtSumPrice, txtPriceOrginal;
     int soluong = 1;
     Button btnApDung;
     EditText edtMaGiamGia;
-
+    double discount = 141.8 * 0.1;
+    static final double sumPrice = 141.8;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,27 +30,29 @@ public class MainActivity extends AppCompatActivity {
         edtMaGiamGia = findViewById(R.id.edtMaGiamGia);
         btnApDung = findViewById(R.id.btnApDung);
         txtPrice = findViewById(R.id.txtPrice);
-        txtSUmPrice = findViewById(R.id.txtSumPrice);
+        txtSumPrice = findViewById(R.id.txtSumPrice);
         txtPriceOrginal = findViewById(R.id.txtPriceOrginal);
 
         txtSoLuong.setText(soluong + "");
         btnTru.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Toast.makeText(MainActivity.this, "clicked -", Toast.LENGTH_SHORT).show();
                 soluong = soluong - 1;
                 if (soluong < 1) {
                     soluong = 1;
                 }
                 txtSoLuong.setText(soluong + "");
+                txtPrice.setText(String.format("%.2f", (sumPrice * soluong)) + "0 đ");
+                txtSumPrice.setText(String.format("%.2f", (sumPrice * soluong)) + "0 đ");
             }
         });
         btnCong.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-//                Toast.makeText(MainActivity.this, "clicked+", Toast.LENGTH_SHORT).show();
                 soluong = soluong + 1;
                 txtSoLuong.setText(soluong + "");
+                txtPrice.setText(String.format("%.2f", (sumPrice * soluong)) + "0 đ");
+                txtSumPrice.setText(String.format("%.2f", (sumPrice * soluong)) + "0 đ");
             }
         });
 
@@ -57,12 +60,12 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (edtMaGiamGia.getText().toString().trim().equals("thoai")) {
-//                    Toast.makeText(MainActivity.this, edtMaGiamGia.getText().toString().trim(), Toast.LENGTH_SHORT).show();
-                    txtSUmPrice.setText("100.000 đ");
-                    txtPrice.setText("100.000 đ");
-//                    txtPriceOrginal.setText("100.000 đ");
+//                    String price = txtSumPrice.getText().toString();
+//                    double sum = Double.parseDouble(price);
+//                    sum = sum - discount;
+                    txtSumPrice.setText(String.format("%.2f", (sumPrice * soluong) - discount) + "0 đ");
                 } else {
-//                    Toast.makeText(MainActivity.this, "Mã giảm giá không hợp lệ !", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Mã giảm giá không hợp lệ !", Toast.LENGTH_SHORT).show();
                 }
             }
         });

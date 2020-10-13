@@ -1,3 +1,15 @@
 <resources>
     <string name="app_name">Lab02Tiki</string>
+    <string name="m_gi_m_gi_l_u">Mã giảm giá đã lưu</string>
+    <string name="mua_sau">Mua sau</string>
+    <string name="_1">1</string>
+    <string name="xem_t_i_y">Xem tại đây</string>
+    <string name="b_n_c_phi_u_qu_t_ng_tiki_got_it_urbox">Bạn có phiếu quà tặng Tiki/Got it/ Urbox?</string>
+    <string name="nh_p_t_i_y">Nhập tại đây?</string>
+    <string name="t_m_t_nh">Tạm tính</string>
+    <string name="_141_800">141.800 đ</string>
+    <string name="th_nh_ti_n">Thành tiền</string>
+    <string name="ti_n_h_nh_t_h_ng">TIẾN HÀNH ĐẶT HÀNG</string>
+    <string name="cung_c_p_b_i_tiki_trading">Cung cấp bởi Tiki Trading</string>
+    <string name="nguy_n_h_m_t_ch_ph_n_v_ng_d_ng">Nguyên hàm tích phân và ứng dụng</string>
 </resources>
